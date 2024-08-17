@@ -18,6 +18,7 @@ function Example() {
                         {/* Definimos las rutas para mostrar Content y Content2 */}
                         <Route path="/content1" element={<Content />} />
                         <Route path="/content2" element={<Content2 />} />
+                        <Route path="/content2" element={<Content2 />} />
                     </Routes>
                 </div>
             </div>
