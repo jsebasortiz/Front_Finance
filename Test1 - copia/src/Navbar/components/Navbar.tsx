@@ -11,6 +11,7 @@ import { BiMailSend } from 'react-icons/bi';
 import {
 
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 const Header: React.FC = () => {
@@ -177,7 +178,7 @@ const Header: React.FC = () => {
                                     <span className="user-status text-muted d-block">Admin</span>
                                 </div>
                                 <div className="avatar">
-                                    <img className="round" src="/path-to-avatar-image.jpg" alt="avatar" height="40" width="40" />
+                                    <img className="round" src="../app-assets\images\profile\user-uploads\user-01.jpg" alt="avatar" height="40" width="40" />
                                 </div>
                             </div>
                         </a>
@@ -260,47 +261,25 @@ const MainMenu: React.FC = () => {
                             </a>
                             <ul className="menu-content">
                                 <li>
-                                    <a className="d-flex align-items-center" href="#">
+                                    <Link to="/content1" className="d-flex align-items-center">
                                         <FaCircle />
-                                        <span className="menu-item text-truncate">Ruta/micro</span>
-                                    </a>
+                                        <span className="menu-item text-truncate">Conten1</span>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="d-flex align-items-center" href="#">
+                                    <Link to="/content2" className="d-flex align-items-center">
                                         <FaCircle />
-                                        <span className="menu-item text-truncate">Agendar recorrido</span>
-                                    </a>
+                                        <span className="menu-item text-truncate">Conten2</span>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="d-flex align-items-center" href="#">
+                                    <Link to="/content1" className="d-flex align-items-center">
                                         <FaCircle />
-                                        <span className="menu-item text-truncate">Clientes</span>
-                                    </a>
+                                        <span className="menu-item text-truncate">Conten1</span>
+                                    </Link>
                                 </li>
-                                <li>
-                                    <a className="d-flex align-items-center" href="#">
-                                        <FaCircle />
-                                        <span className="menu-item text-truncate">Agen multiusuarios</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="d-flex align-items-center" href="#">
-                                        <FaCircle />
-                                        <span className="menu-item text-truncate">Periodos</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="d-flex align-items-center" href="#">
-                                        <FaCircle />
-                                        <span className="menu-item text-truncate">Operarios</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="d-flex align-items-center" href="#">
-                                        <FaCircle />
-                                        <span className="menu-item text-truncate">Camiones</span>
-                                    </a>
-                                </li>
+                                
+
                             </ul>
                         </li>
                         <li className="navigation-header">

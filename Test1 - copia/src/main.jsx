@@ -103,6 +103,7 @@ import '../app-assets/js/core/app.js';
 import './js/scripts/customizer.js'; // Importa el archivo JS
 import './js/scripts/documentation.js'; // Importa el archivo JS
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Example />
