@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Modal, Form, Table } from 'react-bootstrap';
-
-const Content: React.FC = () => {
+const Content1: React.FC = () => {
     return (
         <div className="app-content content">
             <div className="content-overlay"></div>
@@ -54,7 +53,6 @@ const Content: React.FC = () => {
                                         <Form.Label htmlFor="modalDescripcion">Descripción</Form.Label>
                                         <Form.Control as="textarea" id="modalDescripcion" name="modalDescripcion" placeholder="Descripción" required />
                                     </Form.Group>
-                                    <div className="col-12 mt-75"></div>
                                     <div className="col-12 text-center">
                                         <Button type="submit" className="btn btn-primary mt-2 me-1">Crear Categoría</Button>
                                         <Button type="reset" className="btn btn-outline-secondary mt-2" data-bs-dismiss="modal" aria-label="Close">Descartar</Button>
@@ -101,25 +99,9 @@ const Content: React.FC = () => {
                         </Modal.Dialog>
                     </Modal>
                 </div>
-                {/* BEGIN: Footer */}
-                <footer className="footer footer-static footer-light">
-                    <p className="clearfix mb-0">
-                        <span className="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2024
-                            <a className="ms-25" href="#" target="_blank" rel="noopener noreferrer">Switchs</a>
-                            <span className="d-none d-sm-inline-block">, All rights Reserved</span>
-                        </span>
-                        <span className="float-md-end d-none d-md-block">Hand-crafted & Made with
-                            <i data-feather="heart"></i>
-                        </span>
-                    </p>
-                </footer>
-                <button className="btn btn-primary btn-icon scroll-top" type="button">
-                    <i data-feather="arrow-up"></i>
-                </button>
-                {/* END: Footer */}
             </div>
         </div>
     );
 };
 
-export default Content;
+export default Content1;

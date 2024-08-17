@@ -4,6 +4,7 @@ import Navbar from './Navbar/components/Navbar';  // Navbar de tu aplicación
 import MainMenu from './Header/components/Header'; // MainMenu con las opciones
 import Content from './Content/components/Content';  // Contenido de la página 1
 import Content2 from './Content/components/Content2';  // Contenido de la página 2
+import Footer from './Footer/components/Footer';  // Footer separado
 
 function Example() {
     return (
@@ -18,9 +19,10 @@ function Example() {
                         {/* Definimos las rutas para mostrar Content y Content2 */}
                         <Route path="/content1" element={<Content />} />
                         <Route path="/content2" element={<Content2 />} />
-                        <Route path="/content2" element={<Content2 />} />
                     </Routes>
                 </div>
+                {/* Footer se muestra en todas las rutas */}
+                <Footer />
             </div>
         </Router>
     );
