@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import Stack from 'react-bootstrap/Stack';
 import Button from 'react-bootstrap/Button';
-import {
-    FaCircle, FaGrin, FaSignOutAlt, FaMoon, FaShoppingCart, FaUser,
-    FaBell, FaSearch, FaStar, FaCog
-} from 'react-icons/fa';
-
+import { FaCircle, FaCog, FaSignOutAlt, FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Header from '../../Header/components/Header';
 
@@ -13,11 +9,8 @@ const MainMenu: React.FC = () => {
     const [menuFixed, setMenuFixed] = useState<boolean>(false);
 
     const handleToggle = () => {
-        setMenuFixed(prevState => {
-            const newState = !prevState;
-            console.log('Menu Fixed:', newState); // Muestra el estado actualizado en el console log
-            return newState;
-        });
+        setMenuFixed(prevState => !prevState);
+        console.log('Menu Fixed:', !menuFixed); // Muestra el estado actualizado en el console log
     };
 
     return (
@@ -30,12 +23,11 @@ const MainMenu: React.FC = () => {
                             <a className="navbar-brand" href="#">
                                 <span className="brand-logo">
                                     {/* Imagen del logo, con tamaño ajustado */}
-                                    <img src="./app-assets/images/ico/R2.png" alt="Logo" height="40" /> {/* Cambié la altura a 40 */}
+                                    <img src="./app-assets/images/ico/R2.png" alt="Logo" height="40" />
                                 </span>
-                                <h2 className="brand-text" style={{ color: 'red' }}>Univalle</h2> {/* Cambié el color a rojo */}
+                                <h2 className="brand-text" style={{ color: 'red' }}>Univalle</h2>
                             </a>
                         </li>
-
 
                         <li className="nav-item nav-toggle">
                             <a className="nav-link modern-nav-toggle pe-0" onClick={handleToggle}>
@@ -69,23 +61,21 @@ const MainMenu: React.FC = () => {
                                 <li>
                                     <Link to="/content1" className="d-flex align-items-center">
                                         <FaCircle />
-                                        <span className="menu-item text-truncate">Conten1</span>
+                                        <span className="menu-item text-truncate">Content 1</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="/content2" className="d-flex align-items-center">
                                         <FaCircle />
-                                        <span className="menu-item text-truncate">Conten2</span>
+                                        <span className="menu-item text-truncate">Content 2</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/content1" className="d-flex align-items-center">
+                                    <Link to="/content3" className="d-flex align-items-center">
                                         <FaCircle />
-                                        <span className="menu-item text-truncate">Conten3</span>
+                                        <span className="menu-item text-truncate">Content 3</span>
                                     </Link>
                                 </li>
-
-
                             </ul>
                         </li>
                         <li className="navigation-header">
@@ -99,28 +89,28 @@ const MainMenu: React.FC = () => {
                             </a>
                             <ul className="menu-content">
                                 <li>
-                                    <a className="d-flex align-items-center" href="#">
+                                    <Link to="/recorridos" className="d-flex align-items-center">
                                         <FaCircle />
                                         <span className="menu-item text-truncate">Recorridos</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="d-flex align-items-center" href="#">
+                                    <Link to="/datos-carga" className="d-flex align-items-center">
                                         <FaCircle />
                                         <span className="menu-item text-truncate">Datos de carga</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="d-flex align-items-center" href="#">
+                                    <Link to="/recursos" className="d-flex align-items-center">
                                         <FaCircle />
                                         <span className="menu-item text-truncate">Recursos</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="d-flex align-items-center" href="#">
+                                    <Link to="/ejecuciones" className="d-flex align-items-center">
                                         <FaCircle />
                                         <span className="menu-item text-truncate">Ejecuciones</span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </li>

@@ -1,15 +1,14 @@
 // Importaciones de React y otros módulos
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate, Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Importaciones de componentes propios
-import Navbar from './Navbar/components/Navbar.js';  // Navbar de tu aplicación
-import MainMenu from './Header/components/Header.js'; // MainMenu con las opciones
-import Content from './Content/components/Content.js';  // Contenido de la página 1
-import Content2 from './Content/components/Content2.js';  // Contenido de la página 2
-import Footer from './Footer/components/Footer.js';  // Footer separado
+import Navbar from './Navbar/components/Navbar.jsx';  // Navbar de tu aplicación
+import MainMenu from './Header/components/Header.jsx'; // MainMenu con las opciones
+import Content2 from './Content/components/Content2.jsx';  // Contenido de la página 2
+import Footer from './Footer/components/Footer.jsx';  // Footer separado
 
 // Importaciones de estilos adicionales
 import '../app-assets/css/bootstrap.min.css';
@@ -23,33 +22,46 @@ import '../app-assets/js/core/app-menu.js';
 import '../app-assets/js/core/app.js';
 import './js/scripts/customizer.js'; // Importa el archivo JS
 import './js/scripts/documentation.js'; // Importa el archivo JS
+import Content1 from './Content/components/Content.tsx';
 
-// Componente principal de la aplicación
-const App: React.FC = () => {
-    return (
-        <Router>
-            <div>
-                <Navbar />  {/* Barra de navegación */}
-                <MainMenu />  {/* Menú lateral */}
-                <div className="content-area">  {/* Área de contenido que cambiará dinámicamente */}
-                    <Routes>
-                        {/* Redirige la ruta raíz a /content1 */}
-                        <Route path="/" element={<Navigate to="/content1" />} />
-                        {/* Definimos las rutas para mostrar Content y Content2 */}
-                        <Route path="/content1" element={<Content />} />
-                        <Route path="/content2" element={<Content2 />} />
-                    </Routes>
-                </div>
-                {/* Footer se muestra en todas las rutas */}
-                <Footer />
-            </div>
-        </Router>
-    );
-};
+// Componente Layout para envolver las rutas que comparten una estructura común
+// Componente Layout para envolver las rutas que comparten una estructura común
+const Layout: React.FC = () => (
+    <>
+        <Navbar />  {/* Barra de navegación */}
+        <MainMenu />  {/* Menú lateral */}
+        <div className="content-area">  
+            <Outlet />  {/* Aquí es donde las rutas hijas serán renderizadas */}
+        </div>
+        <Footer />  {/* Footer presente en todas las rutas */}
+    </>
+);
+
+// Configuración de rutas utilizando createBrowserRouter
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Layout />,  // Renderiza el Layout en la ruta raíz
+        children: [
+            {
+                index: true,
+                element: <Navigate to="/content1" />  // Redirige a /content1 por defecto
+            },
+            {
+                path: '/content1',
+                element: <Content1 />  // Muestra el componente Content1
+            },
+            {
+                path: '/content2',
+                element: <Content2 />  // Muestra el componente Content2
+            }
+        ]
+    }
+]);
 
 // Renderizado en el DOM
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App />
+        <RouterProvider router={router} />
     </React.StrictMode>
 );
