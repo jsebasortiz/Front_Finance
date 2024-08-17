@@ -1,32 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../app-assets/css/core/menu/menu-types/horizontal-menu.css';
-import '../app-assets/css/core/menu/menu-types/horizontal-menu.min.css'; // Asegúrate de la ruta correcta
-import '../app-assets/css/core/menu/menu-types/vertical-menu.css'; // Asegúrate de la ruta correcta
-import '../app-assets/css/core/menu/menu-types/vertical-menu.min.css'; // Asegúrate de la ruta correcta
-import '../app-assets/css/core/menu/menu-types/vertical-overlay-menu.css'; // Asegúrate de la ruta correcta
-import '../app-assets/css/core/menu/menu-types/vertical-overlay-menu.min.css'; // Asegúrate de la ruta correcta
-import Example from './example.jsx';
+import Example from './App.jsx';
 import 'react-icons/fa';
-
-import '../app-assets/css/bootstrap.css';
 import '../app-assets/css/bootstrap.min.css';
-import '../app-assets/css/colors.css';
 import '../app-assets/css/colors.min.css';
-import '../app-assets/css/components.css';
 import '../app-assets/css/components.min.css';
-import '../app-assets/css/plugins/extensions/ext-component-context-menu.css';
 import '../app-assets/css/plugins/extensions/ext-component-context-menu.min.css';
-import '../app-assets/css/themes/bordered-layout.css';
 import '../app-assets/css/themes/bordered-layout.min.css';
-import '../app-assets/css/themes/dark-layout.css';
 import '../app-assets/css/themes/dark-layout.min.css';
-import '../app-assets/css/themes/semi-dark-layout.css';
 import '../app-assets/css/themes/semi-dark-layout.min.css';
 import '../app-assets/css/core/menu/menu-types/horizontal-menu.css';
 import '../app-assets/css/core/menu/menu-types/horizontal-menu.min.css';
-import '../app-assets/css/core/menu/menu-types/vertical-menu.css';
 import '../app-assets/css/core/menu/menu-types/vertical-menu.min.css';
 import '../app-assets/css/core/menu/menu-types/vertical-overlay-menu.css';
 import '../app-assets/css/core/menu/menu-types/vertical-overlay-menu.min.css';
@@ -44,14 +29,12 @@ import '../app-assets/css/core/colors/palette-noui.css';
 import '../app-assets/css/core/colors/palette-noui.min.css';
 import '../app-assets/css/core/colors/palette-variables.css';
 import '../app-assets/css/core/colors/palette-variables.min.css';
-import '../app-assets/css/bootstrap-extended.css';
 import '../app-assets/css/bootstrap-extended.min.css';
 import '../app-assets/css/pages/app-todo.css';
 import '../app-assets/css/pages/app-todo.min.css';
 import '../app-assets/css/pages/ui-feather.css';
 import '../app-assets/css/pages/ui-feather.min.css';
 import '../app-assets/css/plugins/extensions/ext-component-context-menu.css';
-import '../app-assets/css/plugins/extensions/ext-component-context-menu.min.css';
 import '../app-assets/css/plugins/extensions/ext-component-drag-drop.css';
 import '../app-assets/css/plugins/extensions/ext-component-drag-drop.min.css';
 import '../app-assets/css/plugins/extensions/ext-component-media-player.css';
@@ -79,15 +62,8 @@ import '../app-assets/css/bootstrap.css';
 import '../app-assets/css/bootstrap-extended.css';
 import '../app-assets/css/colors.css';
 import '../app-assets/css/components.css';
-import '../app-assets/css/themes/dark-layout.css';
-import '../app-assets/css/themes/bordered-layout.css';
-import '../app-assets/css/themes/semi-dark-layout.css';
 import '../app-assets/css/core/menu/menu-types/vertical-menu.css';
 import '../app-assets/css/plugins/forms/form-validation.css';
-import '../app-assets/css/bootstrap.css';
-import '../app-assets/css/bootstrap-extended.css';
-import '../app-assets/css/colors.css';
-import '../app-assets/css/components.css';
 import '../app-assets/css/themes/dark-layout.css';
 import '../app-assets/css/themes/bordered-layout.css';
 import '../app-assets/css/themes/semi-dark-layout.css';
@@ -96,13 +72,6 @@ import '../app-assets/js/core/app-menu.js';
 import '../app-assets/js/core/app.js';
 import './js/scripts/customizer.js'; // Importa el archivo JS
 import './js/scripts/documentation.js'; // Importa el archivo JS
-
-// Importar JS del Tema
-import '../app-assets/js/core/app-menu.js';
-import '../app-assets/js/core/app.js';
-import './js/scripts/customizer.js'; // Importa el archivo JS
-import './js/scripts/documentation.js'; // Importa el archivo JS
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

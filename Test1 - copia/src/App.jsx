@@ -6,7 +6,7 @@ import Content from './Content/components/Content';  // Contenido de la página 
 import Content2 from './Content/components/Content2';  // Contenido de la página 2
 import Footer from './Footer/components/Footer';  // Footer separado
 
-function Example() {
+function App() {
     return (
         <Router>
             <div>
@@ -28,4 +28,4 @@ function Example() {
     );
 }
 
-export default Example;
+export default App;
