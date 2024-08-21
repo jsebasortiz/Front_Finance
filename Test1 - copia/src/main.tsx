@@ -31,7 +31,7 @@ import BranchCRUD from './Branch/Components/BranchComponents.tsx';
 const Layout: React.FC = () => (
     <>
         <Navbar />  {/* Barra de navegación */}
-        <MainMenu />  {/* Menú lateral */}
+        <MainMenu />  {/* Header */}
         <div className="content-area">
             <Outlet />  {/* Aquí es donde las rutas hijas serán renderizadas */}
         </div>

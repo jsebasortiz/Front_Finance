@@ -3,6 +3,8 @@ import { Modal, Button, Form, Row, Col, Card } from "react-bootstrap";
 import { CompanyType } from "../../Company/Types/Company";
 import { GetCompanyById, UpdateCompany } from "../../Company/API/CompanyAPI";
 
+//import R2 from './../../../app-assets/images/ico/R2.png';
+
 const CompanyPresentation: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | ArrayBuffer | null>(null);
@@ -63,34 +65,70 @@ const CompanyPresentation: React.FC = () => {
   return (
     <div className="app-content content">
       <div className="content-wrapper container-xxl p-0">
+        <div className="content-header row">
+          <div className="content-header-left col-md-9 col-12 mb-2">
+            <div className="row breadcrumbs-top">
+              <div className="col-12">
+                <h2 className="content-header-title float-start mb-0">Presentación de la Empresa</h2>
+                <div className="breadcrumb-wrapper">
+                  <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li className="breadcrumb-item"><a href="#">Empresas</a></li>
+                    <li className="breadcrumb-item active">Presentación</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="content-body">
           <Card className="shadow-lg animate__animated animate__fadeInUp mb-4">
             <Card.Body>
-              <h2 className="text-center mb-4 company-title">Presentación de la Empresa</h2>
-              <div className="company-detail mb-3">
-                <strong>Razón Social:</strong> {company.companyName}
-              </div>
-              <div className="company-detail mb-3">
-                <strong>NIT:</strong> {company.nit}
-              </div>
-              <div className="company-detail mb-3">
-                <strong>Dirección:</strong> {company.address}
-              </div>
-              <div className="company-detail mb-3">
-                <strong>Correo Electrónico:</strong> {company.email}
-              </div>
-              <div className="company-detail mb-3">
-                <strong>Celular:</strong> {company.phone}
-              </div>
-              <div className="company-detail mb-3">
-                <strong>Actividad Económica:</strong> {company.economicActivity}
-              </div>
-              <div className="company-detail mb-3">
-                <strong>Código CIIU:</strong> {company.ciiuCode}
-              </div>
-              <Button className="edit-button" variant="primary" onClick={handleShow}>
-                Editar
-              </Button>
+              <Row>
+                {/* Columna para la imagen */}
+                <Col md={4} className="text-center">
+                  <img
+                    src={'app-assets/images/ico/R2.png'}
+                    alt="Company Logo"
+                    className="img-fluid mb-3"
+                    style={{ maxHeight: "200px" }}
+                  />
+                  <Form.Group controlId="formFile" className="mb-3">
+                    <Form.Label>Cambiar imagen</Form.Label>
+                    <Form.Control type="file" onChange={handleImageChange} />
+                  </Form.Group>
+                </Col>
+
+                {/* Columna para los detalles */}
+                <Col md={8}>
+                  <h4 className="card-title mb-3">Información de la Empresa</h4>
+                  <div className="company-detail mb-3">
+                    <strong>Razón Social:</strong> {company.companyName}
+                  </div>
+                  <div className="company-detail mb-3">
+                    <strong>NIT:</strong> {company.nit}
+                  </div>
+                  <div className="company-detail mb-3">
+                    <strong>Dirección:</strong> {company.address}
+                  </div>
+                  <div className="company-detail mb-3">
+                    <strong>Correo Electrónico:</strong> {company.email}
+                  </div>
+                  <div className="company-detail mb-3">
+                    <strong>Celular:</strong> {company.phone}
+                  </div>
+                  <div className="company-detail mb-3">
+                    <strong>Actividad Económica:</strong> {company.economicActivity}
+                  </div>
+                  <div className="company-detail mb-3">
+                    <strong>Código CIIU:</strong> {company.ciiuCode}
+                  </div>
+                  <Button className="edit-button" variant="primary" onClick={handleShow}>
+                    Editar
+                  </Button>
+                </Col>
+              </Row>
             </Card.Body>
           </Card>
 
@@ -141,7 +179,7 @@ const CompanyPresentation: React.FC = () => {
                     <Form.Group controlId="formEmail" className="mb-3">
                       <Form.Label>Correo Electrónico</Form.Label>
                       <Form.Control
-                        type="text"
+                        type="email"
                         name="email"
                         value={company.email}
                         onChange={handleChange}
