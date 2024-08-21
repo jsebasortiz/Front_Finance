@@ -23,6 +23,8 @@ import '../app-assets/js/core/app.js';
 import './js/scripts/customizer.js'; // Importa el archivo JS
 import './js/scripts/documentation.js'; // Importa el archivo JS
 import Content1 from './Content/components/Content.tsx';
+import CompanyPresentation from './Content/components/InfoCompany.tsx';
+import BranchCRUD from './Branch/Components/BranchComponents.tsx';
 
 // Componente Layout para envolver las rutas que comparten una estructura común
 // Componente Layout para envolver las rutas que comparten una estructura común
@@ -30,7 +32,7 @@ const Layout: React.FC = () => (
     <>
         <Navbar />  {/* Barra de navegación */}
         <MainMenu />  {/* Menú lateral */}
-        <div className="content-area">  
+        <div className="content-area">
             <Outlet />  {/* Aquí es donde las rutas hijas serán renderizadas */}
         </div>
         <Footer />  {/* Footer presente en todas las rutas */}
@@ -53,7 +55,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/content2',
-                element: <Content2 />  // Muestra el componente Content2
+                element: <CompanyPresentation />  // Muestra el componente Content2
+            },
+            {
+                path: '/branch',
+                element: <BranchCRUD />  // Muestra el componente Content2
             }
         ]
     }

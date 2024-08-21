@@ -71,9 +71,9 @@ const MainMenu: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/content3" className="d-flex align-items-center">
+                                    <Link to="/branch" className="d-flex align-items-center">
                                         <FaCircle />
-                                        <span className="menu-item text-truncate">Content 3</span>
+                                        <span className="menu-item text-truncate">Branch</span>
                                     </Link>
                                 </li>
                             </ul>
