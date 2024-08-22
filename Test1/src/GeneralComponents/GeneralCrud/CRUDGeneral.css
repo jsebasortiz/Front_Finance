@@ -1,0 +1,158 @@
+.table-responsive {
+  width: 80vw; 
+}
+.table-container {
+  width: 100%;
+  overflow-x: auto; 
+  overflow-y: auto; 
+  max-height: 60vh;
+  border: 1px solid #ddd; 
+  border-radius: 0.25rem; 
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Fija el ancho de las columnas */
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+  white-space: nowrap; /* Evita que el contenido se expanda */
+}
+
+.table thead th, .table tbody td {
+  border: 1px solid #ddd; 
+  padding: 0.75rem; 
+}
+
+.table thead th {
+  background-color: #f8f9fa; 
+  color: #495057; 
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1; 
+}
+
+.custom-button, .filter-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem; 
+  font-size: 1rem; 
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+}
+
+
+.title {
+  margin-top: -1.2rem; 
+}
+
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+.pagination-item.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination-item.disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.pagination-item:hover {
+  background-color: #e2e6ea;
+}
+
+.pagination-prev, .pagination-next {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  background-color: #f8f9fa;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.pagination-prev.disabled, .pagination-next.disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.pagination-prev:hover, .pagination-next:hover {
+  background-color: #e2e6ea;
+}
+
+
+.table-responsive th {
+  min-width: 120px; 
+}
+
+
+
+.table thead th {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.bi-arrow-down-up {
+  transition: transform 0.3s ease;
+}
+.bi-arrow-down-up.asc {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.bi-arrow-down-up.desc {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+
+.btn-small {
+  font-size: 0px;
+  padding: 0px 0px;
+  position: absolute; 
+  right: 80px; 
+  top: 30px;
+  
+}
+
+.btn-small2 {
+  font-size: 0px;
+  padding: 0px 0px;
+  position: absolute; 
+  right: 20px; 
+  top: 30px;
+  
+}
+
